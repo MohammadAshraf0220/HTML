@@ -1,0 +1,68 @@
+body{
+    background:black;
+    margin:0;
+    overflow:hidden;
+}
+
+html,
+body{height:100%;
+
+}
+
+.container{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    }
+    .triangle{
+        width:0px;
+        height:0px;
+        border-left:50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid saddlebrown;
+        
+        animation:rotateAnimation 3s infinite;
+    }
+    
+    @keyframes rotateAnimation {
+      100% {
+        transform:rotate(0deg);
+        animation-timing-function:ease-in;
+      }
+
+      0%,
+      100% {
+        transform:rotate(360deg);
+      }
+    
+      100% {
+        transform:rotate(360deg);
+      }
+    }
+    
+    .shadow {
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      background: rgb(61, 58, 58);
+      border-radius: 50%;
+      animation: shadowAnimation 4s infinite;
+      transform: rotate(45deg);
+    }
+    
+    @keyframes shadowAnimation {
+      0%,
+      100% {
+        transform: scaleX(0.7) translateY(22px);
+        opacity: 1;
+      }
+    
+      50% {
+        transform: scaleX(1.2) translateY(22px);
+        animation-timing-function: ease-in-out;
+        opacity: 0.2;
+      }
+    }
